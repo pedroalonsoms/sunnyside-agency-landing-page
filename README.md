@@ -23,4 +23,26 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
 
 ### Areas that could be improved
 
+- Accesibility & semantics
+- Extract layout into Astro components
+- Add hover effects to svg's and remove their colors
+- Compress assets
+- Make it pixel-perfect
+- Improve button's pressable area on mobile
+- Disable scrolling when menu opened
+- Better font default values for scalability
+- Better image resizing. Avoid using `px`
+- Better responsive transition and in-between states
+- Avoid layout shifts when doing transitions
+- Avoid using `br` tag for line breaks
+- Better `4k` and large width screen support
+
 ## Acknowledgments
+
+- Help from [Web.dev](https://web.dev/)
+- Help from [W3Schools](https://www.w3schools.com/graphics/svg_polygon.asp)
+- Tons of help from [StackOverflow](https://stackoverflow.com/)
+- Kevin Powell's [YouTube Channel](https://www.youtube.com/@KevinPowell) helped me a lot
+- Kevin Powell's Responsive Design [Article](https://www.freecodecamp.org/news/taking-the-right-approach-to-responsive-web-design/)
+- Adam Wathan's [YouTube Channel](https://www.youtube.com/@AdamWathan)
+- Previous [project](https://github.com/pedroalonsoms/insure-landing-page)

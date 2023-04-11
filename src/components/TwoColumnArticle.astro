@@ -1,0 +1,55 @@
+---
+export interface Props {
+  title: string;
+  body: string;
+  imgFileName: string;
+  learnMoreColor: string;
+  invertedOrder: boolean;
+}
+
+const { title, body, imgFileName, learnMoreColor, invertedOrder } = Astro.props;
+---
+
+<article>
+  <div class="grid sm:grid-cols-2">
+    <div class={`sm:relative sm:z-0 ${invertedOrder ? "sm:order-1" : ""}`}>
+      <picture class="sm:absolute sm:inset-0 sm:-z-10">
+        <source
+          type="image/jpeg"
+          src={`images/desktop/${imgFileName}`}
+          media="(min-width: 640px)"
+        />
+        <img
+          src={`images/mobile/${imgFileName}`}
+          width="750"
+          height="624"
+          alt=""
+          class="sm:h-full sm:w-full sm:object-cover"
+        />
+      </picture>
+    </div>
+
+    <div class="px-6 py-16 sm:py-36 sm:px-16 xl:px-36">
+      <h2
+        class="text-center font-fraunces text-3xl font-black text-my-neutral-800 sm:text-left sm:text-4xl"
+      >
+        {title}
+      </h2>
+      <p
+        class="mt-6 text-center text-lg font-medium text-my-neutral-300 sm:text-left"
+      >
+        {body}
+      </p>
+      <a
+        href="#"
+        class="group relative z-0 mx-auto mt-10 block max-w-fit px-2 font-fraunces font-black uppercase leading-none sm:mx-0"
+      >
+        Learn more
+        <div
+          class={`absolute inset-x-0 -bottom-1 -z-10 h-2 rounded opacity-30 group-hover:opacity-100 ${learnMoreColor}`}
+        >
+        </div>
+      </a>
+    </div>
+  </div>
+</article>
