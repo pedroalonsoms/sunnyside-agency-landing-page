@@ -2,12 +2,20 @@
 export interface Props {
   title: string;
   body: string;
-  imgFileName: string;
+  mobileImgSrc: string;
+  desktopImgSrc: string;
   learnMoreColor: string;
   invertedOrder: boolean;
 }
 
-const { title, body, imgFileName, learnMoreColor, invertedOrder } = Astro.props;
+const {
+  title,
+  body,
+  mobileImgSrc,
+  desktopImgSrc,
+  learnMoreColor,
+  invertedOrder,
+} = Astro.props;
 ---
 
 <article>
@@ -16,11 +24,11 @@ const { title, body, imgFileName, learnMoreColor, invertedOrder } = Astro.props;
       <picture class="sm:absolute sm:inset-0 sm:-z-10">
         <source
           type="image/jpeg"
-          src={`images/desktop/${imgFileName}`}
+          srcset={desktopImgSrc}
           media="(min-width: 640px)"
         />
         <img
-          src={`images/mobile/${imgFileName}`}
+          src={mobileImgSrc}
           width="750"
           height="624"
           alt=""

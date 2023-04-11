@@ -1,0 +1,38 @@
+---
+export interface Props {
+  title: string;
+  body: string;
+  mobileImgSrc: string;
+  desktopImgSrc: string;
+  textColor: string;
+}
+
+const { title, body, mobileImgSrc, desktopImgSrc, textColor } = Astro.props;
+---
+
+<article class="relative z-0 px-6">
+  <!-- TODO: add all picture elements, type and src -->
+  <picture class="absolute inset-0 -z-10">
+    <!-- TODO: CHANGE ALL SOURCES `SRC` TO `SRCSET` -->
+    <source
+      srcset={desktopImgSrc}
+      media="(min-width: 400px)"
+      type="image/jpeg"
+    />
+    <img
+      src={mobileImgSrc}
+      alt=""
+      class="h-full w-full object-cover object-top"
+    />
+  </picture>
+  <h2
+    class={`pt-96 text-center font-fraunces text-3xl font-black capitalize ${textColor}`}
+  >
+    {title}
+  </h2>
+  <p
+    class={`pt-6 pb-16 text-center font-semibold max-w-xs mx-auto ${textColor}`}
+  >
+    {body}
+  </p>
+</article>

@@ -36,11 +36,21 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
 - Avoid layout shifts when doing transitions
 - Avoid using `br` tag for line breaks
 - Better `4k` and large width screen support
+- Fix layout shifts
+- Fix `x-overflow` on really small screens
+- Change text width to `max-ch` instead of weird padding hacks
+- Increase vertical padding on two-column layouts
+- Astro tailwind formatting on string class concatenation
+- Clear up doc TODO's
+- Add `max-width` on main page contents
+- Avoid tailwind custom values like `tracking-[1em]`
+- Also import font `400` on the other project
 
 ## Acknowledgments
 
 - Help from [Web.dev](https://web.dev/)
 - Help from [W3Schools](https://www.w3schools.com/graphics/svg_polygon.asp)
+- Help from [MDN](https://developer.mozilla.org/en-US/)
 - Tons of help from [StackOverflow](https://stackoverflow.com/)
 - Kevin Powell's [YouTube Channel](https://www.youtube.com/@KevinPowell) helped me a lot
 - Kevin Powell's Responsive Design [Article](https://www.freecodecamp.org/news/taking-the-right-approach-to-responsive-web-design/)
