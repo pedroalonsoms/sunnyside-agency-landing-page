@@ -61,3 +61,4 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
 - Stack Exchange: https://webmasters.stackexchange.com/
 - Image Color Picker: https://imagecolorpicker.com/en
 - WebP converter by TinyIMG: https://tiny-img.com/webp/
+- CompressPNG: https://compresspng.com/
