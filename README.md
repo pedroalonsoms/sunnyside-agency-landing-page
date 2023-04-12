@@ -37,6 +37,7 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
 - Avoid tailwind custom values like `tracking-[0.25em]`
 - Better SVG accesibility
 - Lazy load images and use responsive properties in a better way
+- Support really small screens
 - Better import statements
 - Better TailWind color naming conventions
 - Better navbar layout reusability
