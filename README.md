@@ -67,3 +67,5 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
 - CompressPNG: https://compresspng.com/
 - TinyPNG: https://tinypng.com/
 - Optimizilla Image Compressor: https://imagecompressor.com/
+- W3 ORG: https://www.w3.org/
+- Deque University: https://dequeuniversity.com/
