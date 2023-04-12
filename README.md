@@ -12,9 +12,10 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
 
 ![Desktop preview](preview-desktop.png)
 
-#### Mobile ligthouse stats
+### Mobile ligthouse stats
 
-Mode: Navigation (Default)
+#### Mode: Navigation (Default)
+
 ![Mobile ligthouse stats](stats.png)
 
 ### Built with
