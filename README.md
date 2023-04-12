@@ -10,7 +10,11 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
 
 #### Desktop preview
 
-![Desktop preview](preview.png)
+![Desktop preview](preview-desktop.png)
+
+#### Mobile preview
+
+![Mobile preview](preview-mobile.png)
 
 #### Mobile ligthouse stats
 
