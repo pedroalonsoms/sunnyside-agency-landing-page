@@ -47,6 +47,17 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
 - Also import font `400` on the other project
 - Make SVG's to support a number of different colors
 - Get the exact same color of `sunnyside` text on footer
+- Better SVG scaling
+- Better SVG accesibility
+- Cross-browser testing
+- Consistent SVG external imports
+- Extract SVG into components
+- Consistent media-queries breakpoints
+- Lazy load images
+- Better picture responsive width handling
+- Run this stuff on lighthouse
+- Run rests when zooming-in
+- Add aria-controls to other project
 
 ## Acknowledgments
 
@@ -61,3 +72,4 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
 - RGB to HSL color conversion: https://www.rapidtables.com/convert/color/rgb-to-hsl.html
 - How to Scale SVG: https://css-tricks.com/scale-svg/
 - SVGOMG - SVGO's Missing GUI: https://jakearchibald.github.io/svgomg/
+- Stack Exchange: https://webmasters.stackexchange.com/

@@ -11,18 +11,20 @@ const { title, body, mobileImgSrc, desktopImgSrc, textColor } = Astro.props;
 ---
 
 <article class="relative z-0 px-6">
-  <!-- TODO: add all picture elements, type and src -->
   <picture class="absolute inset-0 -z-10">
-    <!-- TODO: CHANGE ALL SOURCES `SRC` TO `SRCSET` -->
     <source
       srcset={desktopImgSrc}
       media="(min-width: 400px)"
       type="image/jpeg"
+      width="720"
+      height="600"
     />
     <img
       src={mobileImgSrc}
       alt=""
       class="h-full w-full object-cover object-top"
+      width="750"
+      height="1200"
     />
   </picture>
   <h2

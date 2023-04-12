@@ -1,0 +1,19 @@
+---
+export interface Props {
+  mobileImgSrc: string;
+  desktopImgSrc: string;
+}
+
+const { mobileImgSrc, desktopImgSrc } = Astro.props;
+---
+
+<picture>
+  <source srcset={desktopImgSrc} width="720" height="894" type="image/jpeg" />
+  <img
+    src={mobileImgSrc}
+    alt=""
+    width="376"
+    height="376"
+    class="h-full w-full object-cover"
+  />
+</picture>
