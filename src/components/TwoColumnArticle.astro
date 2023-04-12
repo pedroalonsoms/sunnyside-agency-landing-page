@@ -24,8 +24,8 @@ const {
       <picture class="sm:absolute sm:inset-0 sm:-z-10">
         <source
           type="image/webp"
-          srcset={`${desktopImgSrc} 720w`}
-          media="(min-width: 640px)"
+          srcset={`${desktopImgSrc}`}
+          media={`(min-width: ${720 * 2}px)`}
         />
         <img
           src={mobileImgSrc}

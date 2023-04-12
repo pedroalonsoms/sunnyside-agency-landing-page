@@ -13,9 +13,9 @@ const { title, body, mobileImgSrc, desktopImgSrc, textColor } = Astro.props;
 <article class="relative z-0 px-6">
   <picture class="absolute inset-0 -z-10">
     <source
-      srcset={`${desktopImgSrc} 720w`}
-      media="(min-width: 400px)"
+      srcset={`${desktopImgSrc}`}
       type="image/webp"
+      media="(min-width: 400px)"
     />
     <img
       src={mobileImgSrc}

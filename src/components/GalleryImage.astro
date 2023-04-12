@@ -8,7 +8,11 @@ const { mobileImgSrc, desktopImgSrc } = Astro.props;
 ---
 
 <picture>
-  <source srcset={`${desktopImgSrc} 720w`} type="image/webp" />
+  <source
+    srcset={`${desktopImgSrc}`}
+    type="image/webp"
+    media="(min-width: 720px)"
+  />
   <img
     src={mobileImgSrc}
     alt=""
