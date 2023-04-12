@@ -53,9 +53,7 @@ const { title } = Astro.props;
 
         <picture>
           <source
-            srcset="images/desktop/image-header.webp"
-            width="2880"
-            height="1600"
+            srcset="images/desktop/image-header.webp 2880w"
             type="image/webp"
             media="(min-width: 425px)"
           />
@@ -89,7 +87,11 @@ const { title } = Astro.props;
         <Logo class="mx-auto h-8 w-auto text-my-green-600 opacity-90" />
       </div>
 
-      <nav class="mt-8 flex flex-wrap justify-center gap-12">
+      <nav
+        class="mt-8 flex flex-wrap justify-center gap-12"
+        aria-labelledby="footer-navbar"
+      >
+        <h2 class="sr-only" id="footer-navbar">Footer Navbar</h2>
         <a
           href="#"
           class="text-lg font-semibold text-my-green-300 hover:text-my-neutral-100"
@@ -110,7 +112,11 @@ const { title } = Astro.props;
         </a>
       </nav>
 
-      <nav class="mt-20 flex justify-center gap-8">
+      <nav
+        class="mt-20 flex justify-center gap-8"
+        aria-labelledby="socials-navbar"
+      >
+        <h2 class="sr-only" id="socials-navbar">Socials Navbar</h2>
         <a href="#">
           <IconFacebook class="text-my-green-600 hover:text-my-neutral-100" />
         </a>

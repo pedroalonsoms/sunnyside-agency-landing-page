@@ -37,7 +37,9 @@ const { isBackgroundTransparent } = Astro.props;
 
       <nav
         class="flex flex-col items-center gap-6 py-10 md:flex-row md:gap-12 md:p-0"
+        aria-labelledby="main-navbar"
       >
+        <h2 class="sr-only" id="main-navbar">Main navbar</h2>
         <a
           href="#"
           class="text-lg font-semibold text-my-neutral-300 md:font-normal md:text-my-neutral-100"

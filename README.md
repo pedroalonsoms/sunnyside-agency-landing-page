@@ -26,7 +26,6 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
 ### Areas that could be improved
 
 - Accesibility & semantics
-- Compress assets
 - Make it pixel-perfect and color-perfect
 - Improve button's pressable area on mobile
 - Disable scrolling when menu opened
@@ -43,6 +42,7 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
 - Better import statements
 - Better TailWind color naming conventions
 - Better navbar layout reusability
+- Improve image quality
 
 - Run rests when zooming-in
 - Cross-browser testing
@@ -65,3 +65,5 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
 - Image Color Picker: https://imagecolorpicker.com/en
 - WebP converter by TinyIMG: https://tiny-img.com/webp/
 - CompressPNG: https://compresspng.com/
+- TinyPNG: https://tinypng.com/
+- Optimizilla Image Compressor: https://imagecompressor.com/

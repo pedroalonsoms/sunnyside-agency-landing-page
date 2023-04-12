@@ -24,9 +24,7 @@ const {
       <picture class="sm:absolute sm:inset-0 sm:-z-10">
         <source
           type="image/webp"
-          srcset={desktopImgSrc}
-          width="720"
-          height="600"
+          srcset={`${desktopImgSrc} 720w`}
           media="(min-width: 640px)"
         />
         <img
@@ -40,11 +38,11 @@ const {
     </div>
 
     <div class="px-6 py-16 sm:py-36 sm:px-16 xl:px-36">
-      <h2
+      <h3
         class="text-center font-fraunces text-3xl font-black text-my-neutral-800 sm:text-left sm:text-4xl"
       >
         {title}
-      </h2>
+      </h3>
       <p
         class="mt-6 text-center text-lg font-medium text-my-neutral-300 sm:text-left"
       >
