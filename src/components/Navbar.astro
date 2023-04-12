@@ -1,0 +1,97 @@
+---
+import IconHamburger from "./svgs/IconHamburger.astro";
+import Logo from "./svgs/Logo.astro";
+
+export interface Props {
+  isBackgroundTransparent: boolean;
+}
+
+const { isBackgroundTransparent } = Astro.props;
+---
+
+<div
+  class={`${isBackgroundTransparent ? "" : "bg-my-sky-400"} px-6 py-8 lg:px-14`}
+>
+  <div class="flex items-center justify-between">
+    <Logo class="text-my-neutral-100 sm:h-8 sm:w-auto" />
+
+    <button
+      id="mobile-nav-toggle"
+      aria-expanded="false"
+      aria-controls="mobile-nav"
+      class="md:hidden"
+    >
+      <IconHamburger class="text-my-neutral-100" />
+      <span class="sr-only">Menu</span>
+    </button>
+
+    <div
+      id="mobile-nav"
+      class="absolute inset-x-6 top-28 z-10 hidden bg-my-neutral-100 md:static md:inset-auto md:z-auto md:block md:bg-transparent"
+    >
+      <div class="absolute -top-6 right-0 md:hidden">
+        <svg class="h-6 w-6 text-my-neutral-100" width="24" height="24">
+          <polygon points="24,0 24,24 0,24" fill="currentColor"></polygon>
+        </svg>
+      </div>
+
+      <nav
+        class="flex flex-col items-center gap-6 py-10 md:flex-row md:gap-12 md:p-0"
+      >
+        <a
+          href="#"
+          class="text-lg font-semibold text-my-neutral-300 md:font-normal md:text-my-neutral-100"
+        >
+          About
+        </a>
+        <a
+          href="#"
+          class="text-lg font-semibold text-my-neutral-300 md:font-normal md:text-my-neutral-100"
+        >
+          Services
+        </a>
+        <a
+          href="#"
+          class="text-lg font-semibold text-my-neutral-300 md:font-normal md:text-my-neutral-100"
+        >
+          Projects
+        </a>
+        <a
+          href="#"
+          class="inline-block rounded-full bg-my-yellow-200 px-7 py-4 font-fraunces text-sm font-bold uppercase md:bg-my-neutral-100 md:hover:bg-my-neutral-100/30 md:hover:text-my-neutral-100"
+        >
+          Contact
+        </a>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<script>
+  const mobileNav = document.querySelector<HTMLButtonElement>("#mobile-nav");
+  const mobileNavToggle =
+    document.querySelector<HTMLDivElement>("#mobile-nav-toggle");
+
+  if (mobileNav && mobileNavToggle) {
+    let isNavOpen = false;
+    mobileNavToggle.addEventListener("click", () => {
+      if (!isNavOpen) {
+        mobileNav.classList.remove("hidden");
+        mobileNav.classList.add("block");
+
+        mobileNavToggle.setAttribute("aria-expanded", "true");
+
+        isNavOpen = true;
+      } else {
+        mobileNav.classList.remove("block");
+        mobileNav.classList.add("hidden");
+
+        mobileNavToggle.setAttribute("aria-expanded", "false");
+
+        isNavOpen = false;
+      }
+    });
+  } else {
+    console.error("ERROR: elements were not found on the DOM");
+  }
+</script>

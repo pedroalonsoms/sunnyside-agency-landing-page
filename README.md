@@ -24,40 +24,26 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
 ### Areas that could be improved
 
 - Accesibility & semantics
-- Extract layout into Astro components
-- Add hover effects to svg's and remove their colors
 - Compress assets
-- Make it pixel-perfect
+- Make it pixel-perfect and color-perfect
 - Improve button's pressable area on mobile
 - Disable scrolling when menu opened
-- Better font default values for scalability
-- Better image resizing. Avoid using `px`
-- Better responsive transition and in-between states
+- Avoid using `px` media queries and use consistent breakpoints
+- Better responsive transitions and in-between states
 - Avoid layout shifts when doing transitions
-- Avoid using `br` tag for line breaks
-- Better `4k` and large width screen support
 - Fix layout shifts
-- Fix `x-overflow` on really small screens
-- Change text width to `max-ch` instead of weird padding hacks
 - Increase vertical padding on two-column layouts
 - Astro tailwind formatting on string class concatenation
-- Clear up doc TODO's
-- Add `max-width` on main page contents
-- Avoid tailwind custom values like `tracking-[1em]`
-- Also import font `400` on the other project
-- Make SVG's to support a number of different colors
-- Get the exact same color of `sunnyside` text on footer
-- Better SVG scaling
+- Avoid tailwind custom values like `tracking-[0.25em]`
 - Better SVG accesibility
-- Cross-browser testing
-- Consistent SVG external imports
-- Extract SVG into components
-- Consistent media-queries breakpoints
-- Lazy load images
-- Better picture responsive width handling
-- Run this stuff on lighthouse
+- Lazy load images and use responsive properties in a better way
+- Better import statements
+- Better TailWind color naming conventions
+- Better navbar layout reusability
+
 - Run rests when zooming-in
-- Add aria-controls to other project
+- Cross-browser testing
+- Run this stuff on lighthouse
 
 ## Acknowledgments
 
@@ -73,3 +59,4 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
 - How to Scale SVG: https://css-tricks.com/scale-svg/
 - SVGOMG - SVGO's Missing GUI: https://jakearchibald.github.io/svgomg/
 - Stack Exchange: https://webmasters.stackexchange.com/
+- Image Color Picker: https://imagecolorpicker.com/en

@@ -3,284 +3,102 @@ import ClientTestimonial from "../components/ClientTestimonal.astro";
 import GalleryImage from "../components/GalleryImage.astro";
 import SingleColumnArticle from "../components/SingleColumnArticle.astro";
 import TwoColumnArticle from "../components/TwoColumnArticle.astro";
-import IconArrowDown from "../components/svgs/IconArrowDown.astro";
-import IconFacebook from "../components/svgs/IconFacebook.astro";
-import IconHamburger from "../components/svgs/IconHamburger.astro";
-import IconInstagram from "../components/svgs/IconInstagram.astro";
-import IconPinterest from "../components/svgs/IconPinterest.astro";
-import IconTwitter from "../components/svgs/IconTwitter.astro";
-import Logo from "../components/svgs/Logo.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Frontend Mentor | Sunnyside agency landing page">
-  <header>
-    <div class="relative z-0">
-      <div class="px-6 pt-8 lg:px-14">
-        <picture>
-          <source
-            srcset="images/desktop/image-header.jpg"
-            width="2880"
-            height="1600"
-            type="image/jpeg"
-            media="(min-width: 425px)"
-          />
-          <img
-            src="images/mobile/image-header.jpg"
-            width="750"
-            height="1076"
-            alt=""
-            class="absolute top-0 left-0 -z-10 h-full w-full object-cover object-bottom"
-          />
-        </picture>
+  <div class="mx-auto max-w-screen-2xl">
+    <section>
+      <TwoColumnArticle
+        title="Transform your brand"
+        body="We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you."
+        mobileImgSrc="images/mobile/image-transform.jpg"
+        desktopImgSrc="images/desktop/image-transform.jpg"
+        learnMoreColor="bg-my-yellow-200"
+        invertedOrder={true}
+      />
+      <TwoColumnArticle
+        title="Stand out to the right audience"
+        body="Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we'll build and extend your brand in digital places."
+        mobileImgSrc="images/mobile/image-stand-out.jpg"
+        desktopImgSrc="images/desktop/image-stand-out.jpg"
+        learnMoreColor="bg-my-red-200"
+        invertedOrder={false}
+      />
 
-        <div class="flex items-center justify-between">
-          <Logo class="text-my-neutral-100 sm:h-8 sm:w-auto" />
+      <div class="grid sm:grid-cols-2">
+        <SingleColumnArticle
+          title="Graphic design"
+          body="Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients' attention."
+          mobileImgSrc="images/mobile/image-graphic-design.jpg"
+          desktopImgSrc="images/desktop/image-graphic-design.jpg"
+          textColor="text-my-green-600"
+        />
+        <SingleColumnArticle
+          title="Photography"
+          body="Increase your credibility by getting the most stunning, high-quality photos that improve your business image. "
+          mobileImgSrc="images/mobile/image-photography.jpg"
+          desktopImgSrc="images/desktop/image-photography.jpg"
+          textColor="text-my-blue-600"
+        />
+      </div>
+    </section>
 
-          <button
-            id="mobile-nav-toggle"
-            aria-expanded="false"
-            aria-controls="mobile-nav"
-            class="md:hidden"
-          >
-            <IconHamburger class="text-my-neutral-100" />
-            <span class="sr-only">Menu</span>
-          </button>
-
-          <div
-            id="mobile-nav"
-            class="absolute inset-x-6 top-28 z-10 hidden bg-my-neutral-100 md:static md:inset-auto md:z-auto md:block md:bg-transparent"
-          >
-            <div class="absolute -top-6 right-0 md:hidden">
-              <svg class="h-6 w-6 text-my-neutral-100" width="24" height="24">
-                <polygon points="24,0 24,24 0,24" fill="currentColor"></polygon>
-              </svg>
-            </div>
-
-            <nav
-              class="flex flex-col items-center gap-6 py-10 md:flex-row md:gap-12 md:p-0"
-            >
-              <a
-                href="#"
-                class="text-lg font-semibold text-my-neutral-300 md:font-normal md:text-my-neutral-100"
-              >
-                About
-              </a>
-              <a
-                href="#"
-                class="text-lg font-semibold text-my-neutral-300 md:font-normal md:text-my-neutral-100"
-              >
-                Services
-              </a>
-              <a
-                href="#"
-                class="text-lg font-semibold text-my-neutral-300 md:font-normal md:text-my-neutral-100"
-              >
-                Projects
-              </a>
-              <a
-                href="#"
-                class="inline-block rounded-full bg-my-yellow-200 px-7 py-4 font-fraunces text-sm font-bold uppercase md:bg-my-neutral-100 md:hover:bg-my-neutral-100/30 md:hover:text-my-neutral-100"
-              >
-                Contact
-              </a>
-            </nav>
-          </div>
-        </div>
-
+    <section>
+      <div class="px-6 sm:px-16 xl:px-36">
         <h1
-          class="mt-20 text-center font-fraunces text-4xl font-semibold uppercase tracking-widest text-my-neutral-100 sm:mt-24 sm:text-6xl"
+          class="mt-16 mb-16 text-center font-fraunces text-sm font-black uppercase tracking-[0.25em] text-my-neutral-200 sm:mb-20 sm:mt-36 sm:text-xl"
         >
-          We are creatives
+          Client testimonials
         </h1>
-        <div class="mt-12 pb-32 sm:mt-28 sm:pb-80">
-          <IconArrowDown class="mx-auto text-my-neutral-100" />
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <div class="mx-auto max-w-screen-2xl">
-      <section>
-        <TwoColumnArticle
-          title="Transform your brand"
-          body="We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you."
-          mobileImgSrc="images/mobile/image-transform.jpg"
-          desktopImgSrc="images/desktop/image-transform.jpg"
-          learnMoreColor="bg-my-yellow-200"
-          invertedOrder={true}
-        />
-        <TwoColumnArticle
-          title="Stand out to the right audience"
-          body="Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we'll build and extend your brand in digital places."
-          mobileImgSrc="images/mobile/image-stand-out.jpg"
-          desktopImgSrc="images/desktop/image-stand-out.jpg"
-          learnMoreColor="bg-my-red-200"
-          invertedOrder={false}
-        />
-
-        <div class="grid sm:grid-cols-2">
-          <SingleColumnArticle
-            title="Graphic design"
-            body="Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients' attention."
-            mobileImgSrc="images/mobile/image-graphic-design.jpg"
-            desktopImgSrc="images/desktop/image-graphic-design.jpg"
-            textColor="text-my-green-600"
+        <div class="mb-20 grid gap-12 sm:mb-40 sm:grid-cols-3 sm:gap-10">
+          <ClientTestimonial
+            body="We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit."
+            personName="Emily R."
+            personTitle="Marketing Director"
+            imgSrc="images/image-emily.jpg"
           />
-          <SingleColumnArticle
-            title="Photography"
-            body="Increase your credibility by getting the most stunning, high-quality photos that improve your business image. "
-            mobileImgSrc="images/mobile/image-photography.jpg"
-            desktopImgSrc="images/desktop/image-photography.jpg"
-            textColor="text-my-blue-600"
+          <ClientTestimonial
+            body="Sunnyside's enthusiasm coupled with their keen interest in our brand's success made it a satisfying and enjoyable experience."
+            personName="Thomas S."
+            personTitle="Chief Operating Officer"
+            imgSrc="images/image-thomas.jpg"
+          />
+          <ClientTestimonial
+            body="Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!"
+            personName="Jennie F."
+            personTitle="Business Owner"
+            imgSrc="images/image-jennie.jpg"
           />
         </div>
-      </section>
+      </div>
+    </section>
+  </div>
 
-      <section>
-        <div class="px-6 sm:px-16 xl:px-36">
-          <h1
-            class="mt-16 mb-16 text-center font-fraunces text-sm font-black uppercase tracking-[0.25em] text-my-neutral-200 sm:mb-20 sm:mt-36 sm:text-xl"
-          >
-            Client testimonials
-          </h1>
-          <div class="mb-20 grid gap-12 sm:mb-40 sm:grid-cols-3 sm:gap-10">
-            <ClientTestimonial
-              body="We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit."
-              personName="Emily R."
-              personTitle="Marketing Director"
-              imgSrc="images/image-emily.jpg"
-            />
-            <ClientTestimonial
-              body="Sunnyside's enthusiasm coupled with their keen interest in our brand's success made it a satisfying and enjoyable experience."
-              personName="Thomas S."
-              personTitle="Chief Operating Officer"
-              imgSrc="images/image-thomas.jpg"
-            />
-            <ClientTestimonial
-              body="Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!"
-              personName="Jennie F."
-              personTitle="Business Owner"
-              imgSrc="images/image-jennie.jpg"
-            />
-          </div>
-        </div>
-      </section>
+  <div class="grid grid-cols-2 sm:grid-cols-4">
+    <div>
+      <GalleryImage
+        mobileImgSrc="images/mobile/image-gallery-milkbottles.jpg"
+        desktopImgSrc="images/desktop/image-gallery-milkbottles.jpg"
+      />
     </div>
-  </main>
-
-  <footer>
-    <div class="grid grid-cols-2 sm:grid-cols-4">
-      <div>
-        <GalleryImage
-          mobileImgSrc="images/mobile/image-gallery-milkbottles.jpg"
-          desktopImgSrc="images/desktop/image-gallery-milkbottles.jpg"
-        />
-      </div>
-      <div>
-        <GalleryImage
-          mobileImgSrc="images/mobile/image-gallery-orange.jpg"
-          desktopImgSrc="images/desktop/image-gallery-orange.jpg"
-        />
-      </div>
-      <div>
-        <GalleryImage
-          mobileImgSrc="images/mobile/image-gallery-cone.jpg"
-          desktopImgSrc="images/desktop/image-gallery-cone.jpg"
-        />
-      </div>
-      <div>
-        <GalleryImage
-          mobileImgSrc="images/mobile/image-gallery-sugar-cubes.jpg"
-          desktopImgSrc="images/desktop/image-gallery-sugar-cubes.jpg"
-        />
-      </div>
+    <div>
+      <GalleryImage
+        mobileImgSrc="images/mobile/image-gallery-orange.jpg"
+        desktopImgSrc="images/desktop/image-gallery-orange.jpg"
+      />
     </div>
-
-    <div class="bg-my-green-200 px-6">
-      <div class="pt-16">
-        <Logo class="mx-auto h-8 w-auto text-my-green-600 opacity-90" />
-      </div>
-
-      <nav class="mt-8 flex justify-center gap-12">
-        <a
-          href="#"
-          class="text-lg font-semibold text-my-green-300 hover:text-my-neutral-100"
-        >
-          About
-        </a>
-        <a
-          href="#"
-          class="text-lg font-semibold text-my-green-300 hover:text-my-neutral-100"
-        >
-          Services
-        </a>
-        <a
-          href="#"
-          class="text-lg font-semibold text-my-green-300 hover:text-my-neutral-100"
-        >
-          Projects
-        </a>
-      </nav>
-
-      <nav class="mt-20 flex justify-center gap-8">
-        <a href="#">
-          <IconFacebook class="text-my-green-600 hover:text-my-neutral-100" />
-        </a>
-        <a href="#">
-          <IconInstagram class="text-my-green-600 hover:text-my-neutral-100" />
-        </a>
-        <a href="#">
-          <IconTwitter class="text-my-green-600 hover:text-my-neutral-100" />
-        </a>
-        <a href="#">
-          <IconPinterest class="text-my-green-600 hover:text-my-neutral-100" />
-        </a>
-      </nav>
-
-      <p
-        class="mt-16 pb-16 text-center text-sm font-semibold text-my-green-300"
-      >
-        Challenge by
-        <a
-          href="https://www.frontendmentor.io?ref=challenge"
-          target="_blank"
-          class="text-my-green-600 hover:text-my-neutral-100"
-        >
-          Frontend Mentor.
-        </a>
-        Coded by <a href="#">Pedro Alonso Moreno Salcedo</a>.
-      </p>
+    <div>
+      <GalleryImage
+        mobileImgSrc="images/mobile/image-gallery-cone.jpg"
+        desktopImgSrc="images/desktop/image-gallery-cone.jpg"
+      />
     </div>
-  </footer>
+    <div>
+      <GalleryImage
+        mobileImgSrc="images/mobile/image-gallery-sugar-cubes.jpg"
+        desktopImgSrc="images/desktop/image-gallery-sugar-cubes.jpg"
+      />
+    </div>
+  </div>
 </Layout>
-
-<script>
-  const mobileNav = document.querySelector<HTMLButtonElement>("#mobile-nav");
-  const mobileNavToggle =
-    document.querySelector<HTMLDivElement>("#mobile-nav-toggle");
-
-  if (mobileNav && mobileNavToggle) {
-    let isNavOpen = false;
-    mobileNavToggle.addEventListener("click", () => {
-      if (!isNavOpen) {
-        mobileNav.classList.remove("hidden");
-        mobileNav.classList.add("block");
-
-        mobileNavToggle.setAttribute("aria-expanded", "true");
-
-        isNavOpen = true;
-      } else {
-        mobileNav.classList.remove("block");
-        mobileNav.classList.add("hidden");
-
-        mobileNavToggle.setAttribute("aria-expanded", "false");
-
-        isNavOpen = false;
-      }
-    });
-  } else {
-    console.error("ERROR: elements were not found on the DOM");
-  }
-</script>
